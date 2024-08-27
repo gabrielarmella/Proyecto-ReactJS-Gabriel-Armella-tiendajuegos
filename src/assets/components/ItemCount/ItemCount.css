@@ -1,0 +1,26 @@
+
+.contadorBoton{
+    display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;    
+    button{
+        display: inline-block;
+        outline: 0;
+        text-align: center;
+        cursor: pointer;
+        padding: 10px 15px;
+        border: 0;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 17.5px;
+        background-color: #6C9018;
+        line-height: 30px;
+        font-weight: 800;
+        transition: background,color .1s ease-in-out;
+    }
+    p{
+        color: #C5C3C0;
+    }
+    
+}

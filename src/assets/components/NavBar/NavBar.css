@@ -1,0 +1,29 @@
+
+header{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #181E26;
+    color: #C5C3C0;
+}
+
+nav{
+    margin: auto;
+}
+h1{
+    margin: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+li{
+    display: inline-block;
+    margin: 10px;
+}
+
+li:hover{
+    transition: 270ms;
+    translate: 2px 0px;
+    color: #1A9FFF;
+}
