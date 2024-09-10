@@ -1,16 +1,22 @@
 import { useState,useEffect } from 'react';
-import { getJuegos } from '../asynmock';
+import { getJuegos, getJuegosPorCategoria } from '../asynmock';
 import ItemList from "../ItemList/ItemList";
 import './ItemListContainer.css';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = ({}) => {
   const [juegos, setJuegos] = useState([]);
 
+  const {idCategoria} = useParams()
+
   useEffect(() =>{
-    getJuegos()
+    const funcionJuegos = idCategoria ? getJuegosPorCategoria : getJuegos;
+    funcionJuegos(idCategoria)
+      .then(res => setJuegos(res))
+  /*   getJuegos()
       .then(respuesta => setJuegos(respuesta))
-      .catch(error => console.log(error))
-  }, []) 
+      .catch(error => console.log(error)) */
+  }, [idCategoria]) 
 
   return (
     <>

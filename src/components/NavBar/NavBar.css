@@ -6,6 +6,10 @@ header{
     justify-content: space-between;
     background-color: #181E26;
     color: #C5C3C0;
+    a{
+        text-decoration: none;
+        outline: none;
+    }
 }
 
 nav{
@@ -14,16 +18,30 @@ nav{
 h1{
     margin: 30px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #C5C3C0;
+    a{
+        text-decoration: none;
+        outline: none;
+        
+    }
 }
+
 
 
 li{
     display: inline-block;
     margin: 10px;
+    list-style-type: none;
+    a{
+        text-decoration: none;
+        outline: none;
+        color: #C5C3C0;
+    }
 }
-
 li:hover{
-    transition: 270ms;
+    transition: .3s ease;
     translate: 2px 0px;
+}
+li a:hover{
     color: #1A9FFF;
 }
