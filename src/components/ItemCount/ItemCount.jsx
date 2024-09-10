@@ -27,4 +27,5 @@ const ItemCount = ({stock}) => {
   )
 }
 
+
 export default ItemCount
