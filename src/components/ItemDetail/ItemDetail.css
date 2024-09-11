@@ -1,6 +1,5 @@
 .contenedorItem{
     display: flex;
-    flex-wrap: nowrap;
     border-radius: 5px;
     margin-top: 3.75rem;
     margin-left: 21.875rem;
@@ -32,18 +31,8 @@
     align-items: center;
     margin-left: 2.5rem;
     margin-right: 2.5rem;
-    h2{
-        font-weight: 600;
-    }
-    h3{
-        font-weight: 600;
-    }
 }
-.contenedorDesc{
-    width: 400px;
-    font-weight: 400;
-    text-align: center;
-}
+
 
 .botonItem{
     display: flex;

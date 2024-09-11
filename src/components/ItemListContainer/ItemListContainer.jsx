@@ -21,7 +21,7 @@ const ItemListContainer = ({}) => {
   return (
     <>
         {/* <h2 style={{color:"white"}}>{greeting}</h2> */}
-        <h2 style={{textAlign:"center"}}>Mis Productos</h2>
+        <h2 style={{textAlign:"center"}}>Juegos Destacados </h2>
         <ItemList juegos={juegos}/>
     </>
   )
