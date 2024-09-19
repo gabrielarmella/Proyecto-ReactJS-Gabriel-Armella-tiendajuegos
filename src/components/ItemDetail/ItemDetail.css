@@ -4,7 +4,6 @@
     margin-top: 3.75rem;
     margin-left: 21.875rem;
     margin-right: 21.875rem;
-    justify-content: center;
     align-items: center;
     color: #C5C3C0;
     box-shadow: #181E26 3px 3px 8px;
@@ -19,7 +18,8 @@
     img{
         width: 50rem;
         height: auto;
-        object-fit: contain;
+        border-radius: 15px;
+        object-fit: cover;
         mask-image: linear-gradient(to right,#9BC1D7 70%, transparent);
 }
 
