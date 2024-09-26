@@ -5,6 +5,9 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Routes, Route  } from 'react-router-dom';
 import { CarritoProvider } from './Context/CarritoContext';
 import Cart from './components/Cart/Cart';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -22,6 +25,7 @@ const App = () => {
             <Route path="*" element={<h2>Sitio en construccion</h2>}/>
           </Routes>
         </CarritoProvider>
+        <ToastContainer/>
       </BrowserRouter>
     </>
   );

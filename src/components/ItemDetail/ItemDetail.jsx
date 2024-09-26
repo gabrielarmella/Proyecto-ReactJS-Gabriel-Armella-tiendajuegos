@@ -5,6 +5,7 @@ import { useState,} from 'react';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { CarritoContext } from '../../Context/CarritoContext';
+import {toast} from 'react-toastify';
 
 const ItemDetail = ({id, idCat, descripcion, nombre, precio, imgFondo, stock}) => {
 
@@ -19,6 +20,7 @@ const ItemDetail = ({id, idCat, descripcion, nombre, precio, imgFondo, stock}) =
 
       const item = {id, nombre, precio}
       agregarAlCarrito(item, cantidad)
+      toast.success("su compra fue enviada al carrito",{autoClase:1000, theme:"dark", position:"top-right"})
       
     }
   return (

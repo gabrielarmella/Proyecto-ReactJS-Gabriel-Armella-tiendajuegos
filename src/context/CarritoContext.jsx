@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 //1) Voy a importar el useState y CreateContext que me permite crear un contexto que almacenara toda la logica en mi carrito de compras-
 import { useState, createContext } from "react";
 //2) Creamos el contexto
@@ -17,7 +19,7 @@ export const CarritoProvider = ({children}) =>  {
     const [cantidadTotal, setCantidadTotal] = useState (0)
 
     //Verificamos por consola:
-    console.log(carrito)
+    console.log(carrito);
     
     //4) Agregamos algunas funciones auxiliares para la logica del carrito:
     const agregarAlCarrito = (item, cantidad) => {
@@ -50,10 +52,27 @@ export const CarritoProvider = ({children}) =>  {
     }
 
     const vaciarCarrito = () => {
-        setCarrito([])
-        setCantidadTotal(0)
-        setTotal(0)
-    }
+        Swal.fire({
+            title: "¿Estas seguro?",
+            text: "Una vez eliminado tendrás que seleccionar todos nuevamente",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Si, estoy seguro!",
+        }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire({
+                title: "Eliminados",
+                text: "Tus productos fueron quitados del carrito",
+                icon: "success",
+              });
+            setCarrito([]);
+            setCantidadTotal(0);
+            setTotal(0);
+        }
+    });
+};
     return (
         <CarritoContext.Provider value={{carrito, total, cantidadTotal, agregarAlCarrito, eliminarProducto, vaciarCarrito}}>
             {children}
