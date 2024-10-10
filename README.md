@@ -8,7 +8,7 @@ Este es un proyecto de ecommerce basico que se utiliza para el curso de React JS
 -Firebase 10.13.2
 -React-Router-DOM 6.26.2
 -Toastify
--SweetAlert2 11.14.0
+-SweetAlert2
 
 ##Funcionalidades:
 -Ver una lista de productos en stock
