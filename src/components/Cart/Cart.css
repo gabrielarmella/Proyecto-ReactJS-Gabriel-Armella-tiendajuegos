@@ -1,0 +1,57 @@
+.Carrito{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.botonCarrito{
+    width: 90px;
+    outline: 0;
+    padding: 8px;
+    margin:  10px;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    font-size: x-large;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #6C9018;
+    text-decoration: none;
+}
+
+.finalizarCompra2{
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    outline: 0;
+    padding: 8px;
+    margin:  10px;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    font-size: x-large;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #6C9018;
+    text-decoration: none;
+
+}
+
+.verProductos{
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    outline: 0;
+    padding: 8px;
+    margin:  10px;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    font-size: x-large;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #6C9018;
+    text-decoration: none;
+}

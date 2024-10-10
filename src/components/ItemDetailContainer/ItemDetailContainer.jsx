@@ -22,11 +22,6 @@ const ItemDetailContainer = () => {
       .catch(error => console.log(error))
   },[idItem])
 
-    /* useEffect(() => {
-        getUnJuego(idItem)
-            .then(respuesta => setJuegos(respuesta))
-    }, [idItem]) */
-
   return (
     <div>
         <ItemDetail {...juego}/>

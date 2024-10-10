@@ -52,3 +52,17 @@
         background-color: #6C9018;
     }   
 }}
+
+.finalizarCompra{
+    outline: 0;
+    padding: 8px;
+    margin:  10px;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    font-size: x-large;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #6C9018;
+    text-decoration: none;
+}

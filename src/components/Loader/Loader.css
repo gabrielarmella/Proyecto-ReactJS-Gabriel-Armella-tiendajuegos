@@ -3,3 +3,25 @@
     justify-content: center;
     margin-top: 100px;
 }
+
+.spinner{
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border-left-color: #6C9018;
+
+    animation: girar 1.5s linear infinite;
+    -o-animation:  girar 1.5s linear infinite;
+    -webkit-animation:  girar 1.5 linear infinite;
+   
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

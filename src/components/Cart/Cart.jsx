@@ -2,6 +2,8 @@ import {useContext} from 'react'
 import { CarritoContext } from '../../Context/CarritoContext'
 import { Link } from 'react-router-dom'
 import CartItem from '../CartItem/CartItem'
+import "./Cart.css"
+
 
 const Cart = () => {
     const {carrito, total, cantidadTotal, vaciarCarrito} = useContext(CarritoContext)
@@ -10,7 +12,7 @@ const Cart = () => {
         return(
             <>
                 <h2>No hay productos en el carrito, compra o vete</h2>
-                <Link to="/">Ver Productos</Link>
+                <Link className='verProductos'  to="/">Ver Productos</Link>
             </>
         )
     }
@@ -18,12 +20,14 @@ const Cart = () => {
   return (
     <div>
         {
-            carrito.map(producto => <CartItem key={producto.id} {...producto}/>)
+            carrito.map(juego => <CartItem  key={juego.item.id} {...juego}/>)
         }
+        <div className='Carrito'>
         <h3>Total: ${total}</h3>
         <h3>Cantidad Total: {cantidadTotal}</h3>
-        <button onClick={()=> vaciarCarrito}>Vaciar Carrito</button>
-        <Link to="/checkout">Finalizar Compra</Link>
+        <button className='botonCarrito' onClick={()=> vaciarCarrito()}>Vaciar Carrito</button>
+        <Link className='finalizarCompra2' to="/checkout">Finalizar Compra</Link>
+        </div>
     </div>
   )
 }
