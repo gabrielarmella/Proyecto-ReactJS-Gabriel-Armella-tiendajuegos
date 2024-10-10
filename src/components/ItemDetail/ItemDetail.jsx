@@ -3,7 +3,7 @@ import Contador from '../Contador/Contador';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
-import { CarritoContext } from '../../Context/CarritoContext';
+import { CarritoContext } from '../../context/CarritoContext';
 import {toast} from 'react-toastify';
 
 const ItemDetail = ({id, idCat, descripcion, nombre, precio, imgFondo, stock}) => {

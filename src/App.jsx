@@ -3,7 +3,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route  } from 'react-router-dom';
-import { CarritoProvider } from './Context/CarritoContext';
+import { CarritoProvider } from './context/CarritoContext';
 import Cart from './components/Cart/Cart';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
