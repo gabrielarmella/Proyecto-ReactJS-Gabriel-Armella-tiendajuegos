@@ -2,6 +2,7 @@ import { useState, useContext } from "react"
 import { CarritoContext } from "../../context/CarritoContext"
 import { db } from "../../services/config"
 import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore"
+import "./Checkout.css"
 
 const Checkout = () => {
     const [nombre, setNombre] = useState ("")
@@ -72,49 +73,48 @@ const Checkout = () => {
 }   
 
   return (
-    <div>
+    <div className="formularioContenedor">
         <h2>Checkout</h2>
-        <form onSubmit={manejadorFormulario}>
-            {
-                carrito.map(juego => (
-                    <div key={juego.item.id}>
-                        <p>{juego.item.nombre}</p>
-                        <p>{juego.item.precio} x {juego.cantidad}</p>
-                        <p>{juego.item.precio}</p>
-                        <hr/>
-                    </div>
-                ))
-            }
-            <div>
-                <label htmlFor="">Nombre</label>
-                <input type="text" onChange={(e)=>setNombre(e.target.value)} value={nombre}/>
-            </div>
-            <div>
-                <label htmlFor="">Apellido</label>
-                <input type="text" onChange={(e)=>setApellido(e.target.value)} value={apellido}/>
-            </div>
-            <div>
-                <label htmlFor="">Telefono</label>
-                <input type="number" onChange={(e)=>setTelefono(e.target.value)} value={telefono}/>
-            </div>
-            <div>
-                <label htmlFor="">Email</label>
-                <input type="email" onChange={(e)=>setEmail(e.target.value)} value={email}/>
-            </div>
-            <div>
-                <label htmlFor="">Email Confirmacion</label>
-                <input type="email" onChange={(e)=>setEmailConfirmacion(e.target.value)} value={emailConfirmacion}/>
-            </div>
+            <form className="formulario" onSubmit={manejadorFormulario}>
                 {
-                    error && <p style={{color:"red"}}>{error}</p>
+                    carrito.map(juego => (
+                        <div className="productosCarrito" key={juego.item.id}>
+                            <p>Juego: {juego.item.nombre}</p>
+                            <p>${juego.item.precio} x {juego.cantidad}</p>
+                            <p>${juego.item.precio}</p>
+                        </div>
+                    ))
                 }
-            <button type="submit">Confirmar Compra</button>
-                {
-                    ordenId &&(
-                        <strong>¡Gracias por tu compra! Tu numero de order es: {ordenId}</strong>
-                    )
-                }
-        </form>
+                <div className="formularioLabel">
+                    <label htmlFor="">Nombre</label>
+                    <input type="text" onChange={(e)=>setNombre(e.target.value)} value={nombre}/>
+                </div>
+                <div className="formularioLabel">
+                    <label htmlFor="">Apellido</label>
+                    <input type="text" onChange={(e)=>setApellido(e.target.value)} value={apellido}/>
+                </div>
+                <div className="formularioLabel">
+                    <label htmlFor="">Telefono</label>
+                    <input type="number" onChange={(e)=>setTelefono(e.target.value)} value={telefono}/>
+                </div>
+                <div className="formularioLabel">
+                    <label htmlFor="">Email</label>
+                    <input type="email" onChange={(e)=>setEmail(e.target.value)} value={email}/>
+                </div>
+                <div className="formularioLabel">
+                    <label htmlFor="">Email Confirmacion</label>
+                    <input type="email" onChange={(e)=>setEmailConfirmacion(e.target.value)} value={emailConfirmacion}/>
+                </div>
+                    {
+                        error && <p style={{color:"red"}}>{error}</p>
+                    }
+                <button type="submit">Confirmar Compra</button>
+                    {
+                        ordenId &&(
+                            <strong>¡Gracias por tu compra! Tu numero de order es: {ordenId}</strong>
+                        )
+                    }
+            </form>
     </div>
   )
 }

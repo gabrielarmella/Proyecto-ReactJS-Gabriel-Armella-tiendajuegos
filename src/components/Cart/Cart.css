@@ -1,7 +1,7 @@
 .Carrito{
     height: auto;
     display: flex;
-    margin-top: 100px;
+    margin-top: 40px;
     margin-left: 25%;
     margin-right: 29%;
     flex-direction: row;
@@ -13,6 +13,19 @@
         margin-left: 25px;
         margin-right: 25px;
     }
+}
+
+.Carrito2{
+    height: auto;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-right: 29%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #C5C3C0;
+    font-size: x-large;
 }
 
 .botonCarrito{

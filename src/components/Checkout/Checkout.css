@@ -1,0 +1,76 @@
+.formularioContenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #C5C3C0;
+    margin-top: 10vh;
+}
+
+.productosCarrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #C5C3C0;
+    border-bottom: 2px solid #c5c3c0c2;
+    p{
+        font-size: large;
+        font-weight: 600;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+}
+
+.formulario{
+    input{
+        display: block;
+        align-items: center;
+        outline: none;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 0 30px;
+        line-height: 20px;
+        color:#1D333E;
+        border-radius: 10px;
+        border: 2px solid #54575B;
+        background: rgba(255, 255, 255, 0.856);
+        z-index: 100;
+    }
+    label{
+        justify-content: center;
+        font-size: x-large;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    button{
+        display: flex;
+        width: auto;
+        justify-content: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        outline: 0;
+        padding: 5px;
+        margin-top: 40px;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 30px;
+        text-align: center;
+        cursor: pointer;
+        border: 0;
+        border-radius: 18px;
+        color: #fff;
+        background-color: #6C9018;
+        text-decoration: none;
+        font-size: x-large;
+        color: #fff;
+        background-color: #6C9018;
+        text-decoration: none;
+    }
+}
+
+.formularioLabel{
+    display: flex;
+    flex-direction: column;
+}
