@@ -18,7 +18,7 @@ const NavBar = () => {
                   <NavLink to="/categoria/PC">PC</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/categoria/xbox">Xbox</NavLink>
+                  <NavLink to="/categoria/Xbox">Xbox</NavLink>
                 </li>
                 <li>
                   <NavLink to="/categoria/PlayStation">PlayStation</NavLink>

@@ -1,38 +1,47 @@
 .Carrito{
-    width: auto;
     height: auto;
     display: flex;
-    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 25%;
+    margin-right: 29%;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
+    color: #C5C3C0;
+    font-size: x-large;
+    h3{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
 }
 
 .botonCarrito{
-    width: 90px;
+    width: auto;
     outline: 0;
     padding: 8px;
     margin:  10px;
     text-align: center;
     cursor: pointer;
     border: 0;
-    font-size: x-large;
-    border-radius: 5px;
+    font-size: medium;
+    border-radius: 18px;
     color: #fff;
     background-color: #6C9018;
     text-decoration: none;
 }
 
 .finalizarCompra2{
-    width: 90px;
+    width: auto;
     display: flex;
     justify-content: center;
     outline: 0;
-    padding: 8px;
+    padding: 5px 8px;
     margin:  10px;
     text-align: center;
     cursor: pointer;
     border: 0;
-    font-size: x-large;
-    border-radius: 5px;
+    font-size: medium;
+    border-radius: 18px;
     color: #fff;
     background-color: #6C9018;
     text-decoration: none;
@@ -40,18 +49,22 @@
 }
 
 .verProductos{
-    width: 90px;
+    width: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     outline: 0;
-    padding: 8px;
+    padding: 5px 8px;
     margin:  10px;
     text-align: center;
     cursor: pointer;
     border: 0;
-    font-size: x-large;
-    border-radius: 5px;
+    font-size: large;
+    font-weight: 600;
+    border-radius: 18px;
     color: #fff;
     background-color: #6C9018;
     text-decoration: none;
+    margin-left: 45%;
+    margin-right: 45%;
 }
